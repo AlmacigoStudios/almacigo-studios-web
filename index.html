@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Almácigo Studios: digitalización comercial para comercios locales en República Dominicana. Página web, redes sociales, Google Business y WhatsApp para que tu negocio venda más." />
+  <title>Almácigo Studios — Digitalización comercial para negocios en República Dominicana</title>
+  <link rel="canonical" href="https://almacigostudios.com/" />
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg" />
+  <link rel="apple-touch-icon" href="assets/favicon.jpg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://almacigostudios.com/" />
+  <meta property="og:title" content="Almácigo Studios — Digitalización comercial para negocios en RD" />
+  <meta property="og:description" content="Página web, redes sociales, Google Business y WhatsApp para que tu negocio venda más. Digitalización comercial para comercios locales en República Dominicana." />
+  <meta property="og:image" content="https://almacigostudios.com/assets/favicon.jpg" />
+  <meta property="og:locale" content="es_DO" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Almácigo Studios — Digitalización comercial para negocios en RD" />
+  <meta name="twitter:description" content="Página web, redes sociales, Google Business y WhatsApp para que tu negocio venda más." />
+  <meta name="twitter:image" content="https://almacigostudios.com/assets/favicon.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Almácigo Studios",
+    "description": "Digitalización comercial para comercios locales en República Dominicana: páginas web, redes sociales, Google Business y WhatsApp Business.",
+    "url": "https://almacigostudios.com/",
+    "email": "hola@almacigostudios.com",
+    "areaServed": {
+      "@type": "Country",
+      "name": "República Dominicana"
+    },
+    "image": "https://almacigostudios.com/assets/favicon.jpg"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --verde:#2D6A4F;--verde2:#52B788;--menta:#B7E4C7;
+      --tierra:#A0522D;--arena:#E9C46A;--crema:#FDF8EE;
+      --carbon:#1A1A2E;--gris:#6B6B6B;
+      --shadow:0 18px 50px rgba(26,26,46,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'DM Sans',sans-serif;background:var(--crema);color:var(--carbon);line-height:1.6;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1180px,92vw);margin:0 auto}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:14px 22px;border-radius:14px;border:1px solid transparent;font-weight:700;transition:.25s ease;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:1rem}
+    .btn.primary{background:linear-gradient(135deg,var(--verde),var(--verde2));color:#fff;box-shadow:var(--shadow)}
+    .btn.primary:hover{transform:translateY(-2px);filter:saturate(1.05)}
+    .btn.dark{background:var(--carbon);color:#fff}
+    .btn.dark:hover{transform:translateY(-2px)}
+
+    /* Nav */
+    .topbar{
+      position:fixed;inset:0 0 auto 0;z-index:1000;
+      background:rgba(253,248,238,.88);backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(26,26,46,.08);
+      transition:box-shadow .35s ease, background .35s ease;
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;
+      min-height:108px;
+      transition:min-height .35s ease;
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;transition:gap .35s ease}
+    .brand-name{font-size:1.25rem;transition:font-size .35s ease}
+    .logo{
+      width:68px;height:68px;
+      border-radius:18px;overflow:hidden;
+      box-shadow:var(--shadow);flex-shrink:0;
+      transition:width .35s ease, height .35s ease, border-radius .35s ease;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Shrunk state — triggered by JS on scroll */
+    .topbar.scrolled .nav{min-height:64px}
+    .topbar.scrolled .logo{width:38px;height:38px;border-radius:12px}
+    .topbar.scrolled .brand{gap:10px}
+    .topbar.scrolled .brand-name{font-size:1rem}
+    .topbar.scrolled{background:rgba(253,248,238,.96);box-shadow:0 2px 20px rgba(26,26,46,.08)}
+    .menu{display:flex;align-items:center;gap:24px;color:var(--gris);font-weight:600}
+    .menu a:hover{color:var(--verde)}
+    .nav-cta{display:flex;align-items:center;gap:12px}
+    .hamb{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+    .mobile-menu{display:none;flex-direction:column;gap:12px;padding:14px 0 18px}
+    .mobile-menu.show{display:flex}
+    .mobile-menu a{padding:10px 0;border-bottom:1px solid rgba(26,26,46,.08);font-weight:600;color:var(--carbon)}
+
+    /* Hero */
+    .hero{padding:148px 0 72px;background:radial-gradient(circle at top left,rgba(82,183,136,.18),transparent 28%),radial-gradient(circle at top right,rgba(160,82,45,.12),transparent 20%),linear-gradient(180deg,#fff 0%,#fdf8ee 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(45,106,79,.09);color:var(--verde);padding:8px 14px;border-radius:999px;font-weight:700;font-size:.92rem}
+    .hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2.4rem,6vw,4.9rem);line-height:1.02;margin:.55rem 0 1rem}
+    .hero p{font-size:1.08rem;color:var(--gris);max-width:58ch}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;color:var(--gris);font-size:.96rem}
+    .ticker{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .stat{background:#fff;padding:16px 18px;border-radius:18px;border:1px solid rgba(26,26,46,.08)}
+    .stat strong{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem}
+
+    /* Hero visual */
+    .visual{background:linear-gradient(180deg,#fff,rgba(183,228,199,.35));border:1px solid rgba(45,106,79,.1);border-radius:28px;padding:22px;box-shadow:var(--shadow)}
+    .visual-card{background:#fff;border-radius:22px;padding:18px;border:1px solid rgba(26,26,46,.08);margin-bottom:14px}
+    .visual-card:last-child{margin-bottom:0}
+    .small-muted{font-size:.82rem;color:var(--gris);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;font-weight:600}
+    .progress{height:10px;background:#edf2ef;border-radius:999px;overflow:hidden;margin:10px 0}
+    .progress>span{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--verde),var(--verde2))}
+    .notice{color:var(--gris);font-size:.95rem;margin:0}
+    .floating{animation:float 6s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-8px)}}
+
+    /* Sections */
+    section{padding:84px 0}
+    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:44px}
+    .section-head h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.8rem,3vw,3rem);margin:0}
+    .section-head p{max-width:68ch;color:var(--gris);margin:0}
+
+    /* Grids */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    /* Cards */
+    .card{background:#fff;border-radius:22px;padding:22px;border:1px solid rgba(26,26,46,.08);box-shadow:0 10px 28px rgba(0,0,0,.04);transition:.25s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .icon{width:54px;height:54px;border-radius:16px;background:rgba(45,106,79,.1);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+    .pill{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(45,106,79,.08);color:var(--verde);font-weight:700;font-size:.85rem;margin:0 6px 8px 0}
+
+    /* Steps */
+    .steps{display:grid;gap:14px}
+    .step{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
+    .step-num{width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--verde),var(--verde2));color:#fff;display:grid;place-items:center;font-family:'Plus Jakarta Sans';font-size:1.6rem;font-weight:800;flex-shrink:0}
+
+    /* Testimonials */
+    .quote{font-size:1.08rem;color:var(--gris)}
+
+    /* ── PAQUETES ─────────────────────────────── */
+    .paquetes-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+      align-items:stretch;
+    }
+    .pkg-card{
+      background:#fff;
+      border-radius:24px;
+      border:1px solid rgba(26,26,46,.08);
+      box-shadow:0 10px 28px rgba(0,0,0,.04);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition:.3s ease;
+    }
+    .pkg-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .pkg-card.featured{border:2px solid var(--verde2);box-shadow:0 18px 50px rgba(45,106,79,.18)}
+
+    .pkg-img-wrap{
+      width:100%;
+      aspect-ratio:3/4;
+      overflow:hidden;
+      background:#f5f0e8;
+      position:relative;
+    }
+    .pkg-img-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .4s ease;
+    }
+    .pkg-card:hover .pkg-img-wrap img{transform:scale(1.04)}
+    .pkg-featured-badge{
+      position:absolute;
+      top:12px;
+      right:12px;
+      background:linear-gradient(135deg,var(--verde),var(--verde2));
+      color:#fff;
+      font-size:.78rem;
+      font-weight:700;
+      padding:5px 10px;
+      border-radius:999px;
+    }
+
+    .pkg-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:10px}
+    .pkg-bird{font-size:.8rem;color:var(--gris);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin:0}
+    .pkg-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.45rem;font-weight:800;line-height:1.1;margin:0}
+    .pkg-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--verde);margin:0}
+    .pkg-price span{font-size:.82rem;font-weight:500;color:var(--gris)}
+    .pkg-ideal{font-size:.9rem;color:var(--gris);font-style:italic;margin:0}
+    .pkg-features{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;flex:1}
+    .pkg-features li{display:flex;align-items:flex-start;gap:8px;font-size:.9rem}
+    .pkg-features li::before{content:"✓";color:var(--verde2);font-weight:700;flex-shrink:0;margin-top:2px}
+    .pkg-cta{margin-top:auto;padding-top:14px}
+    .pkg-cta .btn{width:100%;justify-content:center}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid rgba(26,26,46,.08)}
+    .faq-q{width:100%;background:none;border:0;padding:18px 0;text-align:left;font-size:1.05rem;font-weight:700;color:var(--carbon);display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'DM Sans',sans-serif}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--gris)}
+    .faq-item.open .faq-a{max-height:200px;padding-bottom:18px}
+    .faq-q span{display:inline-block;transition:transform .2s ease;font-size:1.3rem;line-height:1}
+    .faq-item.open .faq-q span{transform:rotate(45deg)}
+
+    /* Contact form */
+    form{display:grid;gap:14px}
+    input,textarea,select{width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(26,26,46,.12);font-family:'DM Sans',sans-serif;font-size:1rem;background:#fff;color:var(--carbon)}
+    input:focus,textarea:focus,select:focus{outline:2px solid rgba(45,106,79,.25);border-color:var(--verde)}
+    .form-msg{display:none;padding:14px 16px;border-radius:14px;font-weight:600}
+    .form-msg.success{background:rgba(82,183,136,.12);color:#1a5c38;display:block}
+    .form-msg.error{background:rgba(200,50,50,.08);color:#8b1a1a;display:block}
+
+    /* Admin visual */
+    .admin-lock{background:linear-gradient(135deg,#1A1A2E,#2D6A4F);color:#fff;border-radius:26px;padding:28px}
+    .lock-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);padding:8px 12px;border-radius:999px;margin-bottom:14px;font-size:.9rem}
+    .admin-lock ul{color:rgba(255,255,255,.75);padding-left:18px;display:flex;flex-direction:column;gap:8px}
+    .admin-lock .notice{color:rgba(255,255,255,.45);font-size:.88rem;margin-top:14px}
+
+    /* Footer */
+    .footer{padding:26px 0 48px;border-top:1px solid rgba(26,26,46,.08);color:var(--gris)}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:18px}
+    .footer strong{color:var(--carbon);font-family:'Plus Jakarta Sans',sans-serif}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(24px);transition:.6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Responsive */
+    @media(max-width:1100px){.paquetes-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:980px){
+      .hero-grid,.grid-3,.grid-2,.footer-grid{grid-template-columns:1fr}
+      .paquetes-grid{grid-template-columns:repeat(2,1fr)}
+      .section-head{flex-direction:column;align-items:flex-start}
+      .menu,.nav-cta{display:none}
+      .hamb{display:block}
+      .step{grid-template-columns:56px 1fr}
+      .step-num{width:56px;height:56px;border-radius:16px;font-size:1.2rem}
+    }
+    @media(max-width:600px){.paquetes-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <span class="logo"><img src="assets/logo.png" alt="Almácigo Studios logo"></span>
+        <span class="brand-name">Almácigo Studios</span>
+      </a>
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#casos">Casos</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn" style="background:rgba(45,106,79,.09);color:var(--verde);border-color:rgba(45,106,79,.15)" href="#contacto">Diagnóstico gratis</a>
+        <a class="btn primary" href="#contacto">Quiero digitalizar mi negocio</a>
+      </div>
+      <button class="hamb" id="hamb" aria-label="Menú">☰</button>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#casos">Casos</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">🌱 Digitalización comercial para República Dominicana</span>
+          <h1>Tu comercio local, ahora digital, claro y profesional.</h1>
+          <p>Ayudamos a negocios dominicanos a tener presencia digital profesional, atraer más clientes y trabajar con más orden usando herramientas modernas e inteligencia artificial.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contacto">Quiero más clientes</a>
+            <a class="btn dark" href="#casos">Ver casos de éxito</a>
+          </div>
+          <div class="trust">
+            <span>✅ Tono simple para dueños de negocios</span>
+            <span>✅ Diseño moderno e interactivo</span>
+            <span>✅ Soporte cercano</span>
+          </div>
+          <div class="ticker">
+            <div class="stat"><strong>+150</strong><br><span class="notice">comercios digitalizados</span></div>
+            <div class="stat"><strong>30 días</strong><br><span class="notice">promedio de implementación</span></div>
+            <div class="stat"><strong>RD</strong><br><span class="notice">enfoque 100% local</span></div>
+          </div>
+        </div>
+        <div class="visual floating reveal">
+          <div class="visual-card">
+            <div class="small-muted">Tu presencia digital</div>
+            <h3 style="margin:.4rem 0 .6rem">Visible en Google, redes y WhatsApp</h3>
+            <div class="progress"><span></span></div>
+            <p class="notice">Creamos una experiencia sencilla para que tus clientes te encuentren y te escriban sin complicaciones.</p>
+          </div>
+          <div class="visual-card">
+            <div class="small-muted">Orden interno</div>
+            <h3 style="margin:.4rem 0 .6rem">Procesos más claros con IA</h3>
+            <p class="notice">Automatizamos tareas repetitivas y organizamos tu operación con herramientas fáciles de usar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Servicios pensados para el mercado local</h2>
+            <p>Sin tecnicismos innecesarios. Explicamos todo de forma clara y lo implementamos contigo.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal"><div class="icon">📍</div><h3>Google Business</h3><p>Tu negocio aparece cuando la gente busca en Google Maps y en el buscador.</p></div>
+          <div class="card reveal"><div class="icon">🌐</div><h3>Sitios web modernos</h3><p>Páginas claras, rápidas y bonitas para convertir visitas en clientes.</p></div>
+          <div class="card reveal"><div class="icon">💬</div><h3>WhatsApp Business</h3><p>Configuración profesional para responder más rápido y ordenar consultas.</p></div>
+          <div class="card reveal"><div class="icon">📱</div><h3>Redes sociales</h3><p>Perfiles y contenido con imagen seria, moderna y coherente con tu marca.</p></div>
+          <div class="card reveal"><div class="icon">🤖</div><h3>IA para negocios</h3><p>Herramientas para automatizar tareas y ahorrar tiempo operativo.</p></div>
+          <div class="card reveal"><div class="icon">📈</div><h3>Publicidad local</h3><p>Campañas simples y medibles para atraer clientes cercanos a tu comercio.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" style="background:#fff">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Proceso fácil de entender</h2>
+            <p>Diseñado para dueños de negocios que quieren resultados sin lidiar con herramientas complejas.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step card reveal"><div class="step-num">1</div><div><h3>Diagnóstico</h3><p>Revisamos cómo está tu negocio hoy y dónde se está perdiendo oportunidad.</p></div></div>
+          <div class="step card reveal"><div class="step-num">2</div><div><h3>Plan claro</h3><p>Te decimos qué hacer primero, qué importa de verdad y qué no hace falta.</p></div></div>
+          <div class="step card reveal"><div class="step-num">3</div><div><h3>Implementación</h3><p>Diseñamos tu presencia digital y configuramos los sistemas básicos.</p></div></div>
+          <div class="step card reveal"><div class="step-num">4</div><div><h3>Seguimiento</h3><p>Ajustamos, medimos y mantenemos todo funcionando de forma ordenada.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS -->
+    <section id="casos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Casos de éxito</h2>
+            <p>Resultados que reflejan el tipo de transformación que buscamos para comercios locales.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal"><div class="pill">Santo Domingo</div><h3>Panadería La Esperanza</h3><p class="quote">+150% clientes nuevos y mejor orden en mensajes y pedidos.</p></div>
+          <div class="card reveal"><div class="pill">Santiago</div><h3>Ferretería Central</h3><p class="quote">+200% tráfico web y más consultas desde Google Maps.</p></div>
+          <div class="card reveal"><div class="pill">Punta Cana</div><h3>Restaurante El Sabor</h3><p class="quote">+180% reservas online y menos dependencia de llamadas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" style="background:#fff">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Paquetes simples</h2>
+            <p>Cada plan lleva el nombre de un ave endémica dominicana, ordenadas de menor a mayor según el nivel de servicio.</p>
+          </div>
+        </div>
+
+        <div class="paquetes-grid">
+
+          <!-- CUATRO OJOS -->
+          <div class="pkg-card reveal">
+            <div class="pkg-img-wrap">
+              <img src="assets/cuatro-ojos.png" alt="Paquete Cuatro Ojos" loading="lazy">
+            </div>
+            <div class="pkg-body">
+              <p class="pkg-bird">🐦 Ave endémica · 17–18 cm</p>
+              <h3 class="pkg-name">Cuatro Ojos</h3>
+              <p class="pkg-price">RD$4,500<span>/mes</span></p>
+              <p class="pkg-ideal">Para negocios que quieren empezar desde cero.</p>
+              <ul class="pkg-features">
+                <li>Google Business Profile</li>
+                <li>Instagram + Facebook Business</li>
+                <li>WhatsApp Business</li>
+                <li>4 publicaciones mensuales</li>
+                <li>Reporte básico</li>
+              </ul>
+              <div class="pkg-cta">
+                <a class="btn dark" href="#contacto">Empezar con Cuatro Ojos</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CIGUA PALMERA -->
+          <div class="pkg-card featured reveal">
+            <div class="pkg-img-wrap">
+              <img src="assets/cigua-palmera.png" alt="Paquete Cigua Palmera" loading="lazy">
+              <span class="pkg-featured-badge">⭐ Recomendado</span>
+            </div>
+            <div class="pkg-body">
+              <p class="pkg-bird">🐦 Ave nacional de RD · 18–20 cm</p>
+              <h3 class="pkg-name">Cigua Palmera</h3>
+              <p class="pkg-price">RD$10,000<span>/mes</span></p>
+              <p class="pkg-ideal">Para negocios que quieren crecer con sistema.</p>
+              <ul class="pkg-features">
+                <li>Todo lo del paquete Cuatro Ojos</li>
+                <li>10 publicaciones mensuales</li>
+                <li>2 reels mensuales</li>
+                <li>Chatbot básico WhatsApp</li>
+                <li>Gestión de reseñas Google</li>
+                <li>Reporte mensual con recomendaciones</li>
+              </ul>
+              <div class="pkg-cta">
+                <a class="btn primary" href="#contacto">Empezar con Cigua Palmera</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- COTORRA -->
+          <div class="pkg-card reveal">
+            <div class="pkg-img-wrap">
+              <img src="assets/cotorra.png" alt="Paquete Cotorra" loading="lazy">
+            </div>
+            <div class="pkg-body">
+              <p class="pkg-bird">🐦 Ave endémica · 25–30 cm</p>
+              <h3 class="pkg-name">Cotorra</h3>
+              <p class="pkg-price">RD$28,000<span> inicio + RD$5,500/mes</span></p>
+              <p class="pkg-ideal">Para negocios que quieren página web y verse más formales.</p>
+              <ul class="pkg-features">
+                <li>Página web de 5 páginas</li>
+                <li>Dominio y hosting primer año</li>
+                <li>Integración WhatsApp y Google Maps</li>
+                <li>SEO local básico</li>
+                <li>6 publicaciones mensuales</li>
+                <li>Mantenimiento mensual</li>
+              </ul>
+              <div class="pkg-cta">
+                <a class="btn dark" href="#contacto">Empezar con Cotorra</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CUÁ -->
+          <div class="pkg-card reveal">
+            <div class="pkg-img-wrap">
+              <img src="assets/cua.png" alt="Paquete Cuá" loading="lazy">
+            </div>
+            <div class="pkg-body">
+              <p class="pkg-bird">🐦 Ave endémica · ~30 cm · la más grande</p>
+              <h3 class="pkg-name">Cuá</h3>
+              <p class="pkg-price">RD$20,000<span>/mes</span></p>
+              <p class="pkg-ideal">Para negocios que quieren escalar con sistema completo.</p>
+              <ul class="pkg-features">
+                <li>Todo del paquete Cotorra activo</li>
+                <li>14 publicaciones mensuales</li>
+                <li>4 reels mensuales</li>
+                <li>Chatbot inteligente WhatsApp + Instagram</li>
+                <li>1 campaña mensual de anuncios</li>
+                <li>1 hora de asesoría estratégica</li>
+                <li>Reporte mensual detallado</li>
+              </ul>
+              <div class="pkg-cta">
+                <a class="btn dark" href="#contacto">Empezar con Cuá</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Preguntas frecuentes</h2>
+            <p>Respuestas directas para ayudar a tomar decisión sin fricción.</p>
+          </div>
+        </div>
+        <div style="max-width:780px">
+          <div class="card reveal faq-item">
+            <button class="faq-q">¿Necesito saber de tecnología?<span>+</span></button>
+            <div class="faq-a"><p>No. Nosotros hacemos el trabajo técnico y te lo explicamos en palabras simples.</p></div>
+          </div>
+          <div class="card reveal faq-item" style="margin-top:10px">
+            <button class="faq-q">¿Cuánto tarda el proceso?<span>+</span></button>
+            <div class="faq-a"><p>Depende del paquete, pero la base puede comenzar en pocos días con un diagnóstico claro.</p></div>
+          </div>
+          <div class="card reveal faq-item" style="margin-top:10px">
+            <button class="faq-q">¿Pueden manejar todo por mí?<span>+</span></button>
+            <div class="faq-a"><p>Sí. Nuestra propuesta está pensada para que el dueño del negocio no tenga que complicarse.</p></div>
+          </div>
+          <div class="card reveal faq-item" style="margin-top:10px">
+            <button class="faq-q">¿Qué pasa si ya tengo Instagram?<span>+</span></button>
+            <div class="faq-a"><p>¿Ese Instagram te trae clientes? La diferencia entre tener una cuenta y tener un sistema que funciona es enorme. Ahí es donde entramos nosotros.</p></div>
+          </div>
+          <div class="card reveal faq-item" style="margin-top:10px">
+            <button class="faq-q">¿Por qué no contratar a un sobrino?<span>+</span></button>
+            <div class="faq-a"><p>Hay una gran diferencia entre ayuda casual y un sistema con estrategia y constancia. Nosotros entregamos resultados medibles, no promesas.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" style="background:#fff">
+      <div class="container grid-2">
+        <div class="card reveal">
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px">Agenda tu diagnóstico gratis</h2>
+          <p style="color:var(--gris);margin-bottom:22px">Cuéntanos de tu negocio y te diremos por dónde empezar. Respuesta en menos de 24 horas.</p>
+          <form id="leadForm">
+            <input type="text" id="name" placeholder="Tu nombre" required autocomplete="name">
+            <input type="text" id="business" placeholder="Nombre del negocio" required>
+            <input type="tel" id="phone" placeholder="Teléfono" required autocomplete="tel">
+            <input type="email" id="email" placeholder="Correo electrónico" required autocomplete="email">
+            <select id="need" required>
+              <option value="">¿Qué necesitas mejorar?</option>
+              <option>Website</option>
+              <option>Redes sociales</option>
+              <option>Google Business</option>
+              <option>IA para automatizar</option>
+              <option>No sé, necesito orientación</option>
+            </select>
+            <textarea id="message" rows="4" placeholder="Cuéntanos un poco más (opcional)"></textarea>
+            <button class="btn primary" type="submit" id="submitBtn">Enviar solicitud</button>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
+        </div>
+
+        <div class="admin-lock reveal">
+          <div class="lock-badge">🔒 Acceso interno protegido</div>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px">Área administrativa segura</h2>
+          <p>La parte privada no debe estar visible ni accesible sin autenticación fuerte.</p>
+          <ul>
+            <li>Login separado del sitio público</li>
+            <li>Contraseña fuerte + 2FA</li>
+            <li>Protección por Cloudflare / firewall</li>
+            <li>Rutas internas no indexadas</li>
+            <li>Registro de accesos y bloqueo por intentos fallidos</li>
+          </ul>
+          <p class="notice">Esto es solo la capa visible. El backend real vive detrás de autenticación segura en hosting o app separada.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Almácigo Studios</strong>
+        <p style="margin-top:8px">Estudio dominicano de digitalización comercial para negocios locales.</p>
+      </div>
+      <div>
+        <strong>Servicios</strong>
+        <p style="margin-top:8px;line-height:2">Google Business<br>Webs modernas<br>Redes sociales<br>IA para negocios</p>
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <p style="margin-top:8px;line-height:2">hola@almacigostudios.com<br>República Dominicana</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top:28px;font-size:.85rem;color:rgba(107,107,107,.6)">
+      © 2026 Almácigo Studios · Todos los derechos reservados
+    </div>
+  </footer>
+
+  <script>
+    /* ── Navbar shrink on scroll ── */
+    const topbar = document.querySelector('.topbar');
+    window.addEventListener('scroll', () => {
+      topbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile menu ── */
+    const hamb = document.getElementById('hamb');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamb?.addEventListener('click', () => mobileMenu.classList.toggle('show'));
+    document.querySelectorAll('#mobileMenu a').forEach(a =>
+      a.addEventListener('click', () => mobileMenu.classList.remove('show'))
+    );
+
+    /* ── Scroll reveal ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── FAQ accordion (one open at a time) ── */
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    /* ── Contact form → Express API ── */
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formMsg');
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      msg.className = 'form-msg';
+
+      const payload = {
+        name:     document.getElementById('name').value.trim(),
+        business: document.getElementById('business').value.trim(),
+        phone:    document.getElementById('phone').value.trim(),
+        email:    document.getElementById('email').value.trim(),
+        need:     document.getElementById('need').value,
+        message:  document.getElementById('message').value.trim(),
+      };
+
+      try {
+        const res  = await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+
+        if (res.ok && data.ok) {
+          msg.textContent = data.message;
+          msg.classList.add('success');
+          this.reset();
+        } else {
+          msg.textContent = data.error || 'Ocurrió un error. Intenta de nuevo.';
+          msg.classList.add('error');
+        }
+      } catch (_) {
+        msg.textContent = 'No se pudo conectar con el servidor. Revisa tu conexión.';
+        msg.classList.add('error');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Enviar solicitud';
+      }
+    });
+  </script>
+</body>
+</html>

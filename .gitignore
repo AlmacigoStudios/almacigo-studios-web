@@ -1,0 +1,15 @@
+node_modules/
+.wrangler/
+.DS_Store
+.claude/
+
+# Documentos privados — no subir a repositorio público
+Documentos oficiales/
+Marketing/
+AlmacigoProspeccion/
+Video Presentación/
+Prep/
+Plantilla Web Clientes/
+sitios-web/
+*.docx
+almacigo-studios.html
