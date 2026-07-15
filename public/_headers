@@ -4,3 +4,5 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Weg9NhCYb8m1RbZYddf+LITnTkASbmwBIezOSnNtQVk=' https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.facebook.com; font-src 'self' data:; connect-src 'self' https://www.facebook.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'
