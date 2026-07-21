@@ -16,6 +16,7 @@ import {
   FileText,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import ParallaxImage from "@/components/ParallaxImage";
 import {
   Accordion,
   AccordionContent,
@@ -151,8 +152,8 @@ const paquetes = [
     imagen: "/images/cotorra.png",
     nombre: "Cotorra",
     subtitulo: "🐦 Ave endémica · 25–30 cm",
-    precio: "RD$5,500/mes",
-    periodo: " + RD$27,500 Inicial (por web)",
+    precio: "RD$6,500/mes",
+    periodo: " + RD$49,500 Inicial (por web)",
     descripcion: "Para negocios que quieren página web y verse más formales.",
     items: [
       "Página web de 5 páginas",
@@ -221,13 +222,12 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image
+          <ParallaxImage
             src="/images/hero.jpg"
             alt="Comercio local en República Dominicana"
-            fill
-            className="object-cover"
             priority
             quality={90}
+            strength={15}
           />
           <div
             className="absolute inset-0"
